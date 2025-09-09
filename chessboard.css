@@ -1,0 +1,28 @@
+body{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    min-height : 100vh;
+    margin : 0;
+    background-color: #f0f0f0;
+}
+table.chess{
+    border : 1 solid black;
+    border-collapse : collapse;
+    width : min(90vmin, 600px);
+    height : min(90vmin, 600px);
+    table-layout : fixed;
+    box-shadow : 0 0 10px rgba(0,0,0,0.5);
+}
+table.chess td{
+   aspect-ratio : 1/1;
+   padding : 0;
+}
+table.chess tr:nth-child(even) td:nth-child(even),
+table.chess tr:nth-child(odd) td:nth-child(odd){
+    background-color : white;
+}
+table.chess tr:nth-child(even) td:nth-child(odd),
+table.chess tr:nth-child(odd) td:nth-child(even){
+    background-color : black;
+}
