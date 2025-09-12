@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #333;
+}
+.traffic-light {
+    width: 80px;
+    background: black;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
+}
+.light {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: grey;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+}
+.red { background: red;}
+.yellow { background: yellow;}
+.green {background: green;}
