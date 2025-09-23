@@ -1,0 +1,65 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(14, 132, 171);
+}
+
+.form-container{
+    background: skyblue;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 600px;
+    height: 600px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.form-container h2{
+    text-align: center;
+    margin-bottom : 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label{
+    display:block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-sizing:border-box;
+}
+
+.radio-group, .checkbox-group{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button{
+    width:100%;
+    padding: 10px;
+    background: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3 ease;
+}
+
+button:hover{
+    background: #45a049;
+}
