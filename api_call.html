@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            /* border: 2px solid black;
+            border-bottom-color : greenyellow;
+            border-top-color: rebeccapurple;
+            border-left-color: dodgerblue;
+            border-right-color: darkolivegreen; */
+            padding: 0;
+            text-align:center;
+            margin: 0;
+        }
+        #container{
+            border: 2px solid rgb(125, 1, 1);
+            margin-top: 5px;
+            height:200px;
+            width: 300px;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-left: 500px;
+            overflow:auto;
+
+        }
+    </style>
+    </head>
+    <body>
+
+        <h4>Data call through promise</h4>
+
+        <div id="container">
+
+
+
+        </div>
+        <script>
+
+        let api = "https://dummyjson.com/products/1";
+
+        let mypromise = new Promise((resolve, reject)=>{
+            fetch(api)
+            .then(res => res.json())
+            .then(data => resolve(info=data))
+            .catch(error => reject(error));
+        })
+        mypromise
+        .then(key => {
+           document.getElementById("container").innerHTML = `
+                  <div class="content">
+                    ${key.id} <br><br>
+                    ${key.title} <br><br>
+                    ${key.description} <br><br>
+                    </div>
+              `
+        })
+        .catch(err => {
+           console.log(err);
+        })
+    </script>
+
+        <button onclick="getData">Get Data</button>
+
+        <div id="err">
+
+            Error id loading....
+
+        </div>
+    </body>
+
+</html>

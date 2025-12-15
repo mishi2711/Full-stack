@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lsng = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initail-scale=1.0">
+    <title> clock </title>
+    <style> 
+        body{
+            display : flex;
+            margin : 0;
+            align-items: center;
+            justify-content : center;
+            background-color: white;
+            height : 100vh;
+        }
+        .clock {
+            display : flex;
+            gap : 10px;
+        }
+        .digit, .colon{
+            font-size : 80px;
+            text-shadow : 5px 5px 10px gray;
+            color : cyan;
+        }
+        @media (max-width : 600px){
+            .digit, .colon{
+                font-size : 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class = "clock">
+        <div class = "digit">
+            12
+        </div>
+        <div class = "colon">
+            :
+        </div>
+        <div class = "digit">
+            45
+        </div>
+        <div class = "colon">
+            :
+        </div>
+        <div class = "digit">
+            30
+        </div>
+    </div>        
+</body>
+</html>
